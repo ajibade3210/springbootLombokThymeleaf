@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Using variable Expression ${}
+-->
+<p>ID: <span th:text="${savedEmployee.id}"></span></p>
+<p>First Name: <span th:text="${savedEmployee.firstName}"></span></p>
+<p>Lasst Name: <span th:text="${savedEmployee.lastName}"></span></p>
+<p>Street: <span th:text="${savedEmployee.address.street}"></span></p>
+<p>State: <span th:text="${savedEmployee.address.state}"></span></p>
+<p>Zip Code: <span th:text="${savedEmployee.address.zipcode}"></span></p>
+</body>
+</html>
