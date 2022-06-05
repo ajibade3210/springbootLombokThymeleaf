@@ -32,6 +32,14 @@ public class EmployeeController {
     @PostMapping("/addEmp")
     public String saveEmp(@Valid @ModelAttribute("emp") Employee emp, BindingResult result, RedirectAttributes ra) {
 //        Save to DB
+        /*
+        * Using the thymeleaf validation and error feature
+        * Import all important javax dependencies
+        * Insert validation with message in the Entity file
+        * create error span in thymeleaf page...
+        * In the contoller Post Mapping insert @Valid and BindingResult in the argument\
+        * set an if condition for error
+        * */
         if(result.hasErrors()){
             return "empForm";
         }
